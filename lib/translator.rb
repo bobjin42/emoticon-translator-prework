@@ -9,8 +9,8 @@ def load_library(file_path)
   new_hash[:get_emoticon] = {}
   
   emoticons.each{|word, emoticon|
-  new_hash[:get_meaning][emoticon[1]] = word
-  new_hash[:get_emoticon][emoticon[0]] = emoticon[1]
+  new_hash["get_meaning"][emoticon[1]] = word
+  new_hash["get_emoticon"][emoticon[0]] = emoticon[1]
   }
   new_hash
 end
