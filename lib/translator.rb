@@ -33,10 +33,12 @@ end
 def get_english_meaning(file_path, emoticon)
   # code goes here
   new_hash = load_library(file_path)
-  ele.each{|key, value|
+  new_hash.each{|fac, ele|
+    ele.each{|key, value|
       if value == emoticon
         return key
       end
     }
+  }
   return "Sorry, that emoticon was not found"
 end
