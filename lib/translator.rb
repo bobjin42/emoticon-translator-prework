@@ -22,8 +22,8 @@ def get_japanese_emoticon(file_path, emoticon)
   new_hash = load_library(file_path)
   new_hash.each{|fac, ele|
     ele.each{|key, value|
-      if key == emoticon
-        return value
+      if value == emoticon
+        return key
       end
     }
   }
