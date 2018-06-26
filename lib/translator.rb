@@ -35,8 +35,8 @@ def get_english_meaning(file_path, emoticon)
   new_hash = load_library(file_path)
   new_hash.each{|fac, ele|
     ele.each{|key, value|
-      if value == emoticon
-        return key
+      if key == emoticon
+        return value
       end
     }
   }
